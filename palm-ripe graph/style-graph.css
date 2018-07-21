@@ -1,0 +1,24 @@
+#line_top_x {
+    margin-top: 15% ;
+}
+.vl {
+    margin-left: 20px;
+      border-left: 3px solid gray;
+      height: 43px;
+  }
+  
+  #logout-button {
+    margin-right: 10px;
+    height: 30px;
+  }
+  
+  #logout-button:hover {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .nav-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  #farm-name {
+    color: #d1a2ff;
+  }
