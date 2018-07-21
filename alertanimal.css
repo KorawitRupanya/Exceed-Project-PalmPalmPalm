@@ -1,5 +1,8 @@
 #karok{
-    margin-left: 115px;
-    width: 200px;
-    height: 200px;
+    width: 115px;
+    height: 150px;
+}
+
+.modal {
+    text-align: center;
 }
