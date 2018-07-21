@@ -1,0 +1,30 @@
+.full {
+    height: 100%;
+    
+}
+.big {
+font-size: 60px ;
+}
+
+#logout-button {
+    margin-right: 10px;
+    height: 30px;
+  }
+  
+  #logout-button:hover {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .nav-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  .center {
+    text-align: center
+}
+
+.box {
+
+    width: 350px;
+    height: 350px;
+    margin: auto;
+}
