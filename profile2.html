@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./profile-style2.css">
+  <title>Champagne palm</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div id="farm-name">
+      <h3 id="name">Ripe-palm Worldwide</h3>
+    </div>
+    <div class="vl"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" style="margin-left: 20px;">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item active" style="margin-left: 10px;">
+          <a class="nav-link" href="index-graph.html">Dashboard</a>
+        </li>
+      </ul>
+      <a href="index.html">
+        <form class="form-inline my-2 my-lg-0">
+          <img id="logout-button" src="https://image.ibb.co/gtqsWy/lockout.png" alt="Logout">
+        </form>
+      </a>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-5">
+      <div style="position: relative;">
+        <img id="profile-palm" src="png/palm2.png" alt="big-palm" style="position: absolute;">
+        <a href="profile.html">
+          <button id="back" type="button" class="btn btn-dark" style="position: absolute;">back</button>
+        </a>
+        <button id="next" type="button" class="btn btn-dark" style="position: absolute;">next</button>
+        <div id="add-palm"></div>
+        <img id="palm-box" src="png/box.png" alt="box" style="position: relative;">
+      </div>
+    </div>
+    <div class="col-5">
+      <div id="status">
+        <div id="palm-status" class="alert alert-secondary" role="alert">
+          <h3>Status</h3>
+          <div style="text-align: center">
+            <h1>raw palm</h1>
+          </div>
+        </div>
+      </div>
+      <div id="palm-number" class="alert alert-info" role="alert">
+        <h4>Number of ripe palm fruits: 0 palm fruits</h4>
+      </div>
+    </div>
+    <div id="set" class="col-2">
+      <div style="text-align: center;margin-right: 500px;margin-top: 40px;">
+        <h5>Morning.Night</h5>
+        <label class="switch">
+          <input id="day-button" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <h5>Raining</h5>
+        <label class="switch">
+          <input id="rain-button" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <button id="raw">Raw</button>
+      <button id="half-ripe">Half-ripe</button>
+      <button id="ripe">Ripe</button>
+      <h3>
+        <br>palm number</h3>
+      <button id="add">+</button>
+      <button id="clear">Reset</button>
+    </div>
+  </div>
+  <img id="soil" src="png/soil.png" alt="soil">
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+  crossorigin="anonymous"></script>
+<script src="./profile-app2.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script> -->
+</body>
+
+</html>
