@@ -1,6 +1,7 @@
 $(function () {
   let day = false
   let rain = false
+  let red = false
   let bgColor = "#d1fdff"
   let palmNumber = 0
   let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
@@ -26,7 +27,6 @@ $(function () {
     }
   })
   $('#red-button').on('click', function () {
-    console.log('press');
     red = !red
     if (palmNumber === 10 & red === true) {
       $('#status').html('<div id="palm-status" class="alert alert-warning" role="alert"><h3>Status</h3><div style="text-align: center"><h1>half-ripe palm</h1></div></div >')
@@ -45,6 +45,7 @@ $(function () {
     $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
   })
   $('#add').on('click', function () {
+    console.log('palmnum' + palmNumber)
     let luckyNumber = numList[Math.floor(Math.random() * numList.length)];
     let index = numList.indexOf(luckyNumber);
     if (index > -1 & numList.length != 0) {
@@ -77,6 +78,8 @@ $(function () {
     $('#palm-number').html(`<h4>Number of ripe palm fruits: 0 palm fruit</h4>`)
     $('#add-palm').html('')
     palmNumber = 0;
+    $('#red-button').prop('checked', false)
+    red = false
     numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
   })
 })
