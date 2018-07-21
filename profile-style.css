@@ -76,6 +76,14 @@ body {
   margin-left: 440px;
 }
 
+#squirrel-button {
+  margin-top: 30px;
+}
+
+#squirrel {
+  width: 35px;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -130,4 +138,13 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#karok{
+    width: 115px;
+    height: 150px;
+}
+
+.modal {
+    text-align: center;
 }

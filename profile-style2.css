@@ -131,3 +131,12 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+#karok{
+    width: 115px;
+    height: 150px;
+}
+
+.modal {
+    text-align: center;
+}
