@@ -25,6 +25,16 @@ $(function () {
       document.body.style.backgroundImage = "";
     }
   })
+  $('#red-button').on('click', function () {
+    console.log('press');
+    red = !red
+    if (palmNumber === 10 & red === true) {
+      $('#status').html('<div id="palm-status" class="alert alert-warning" role="alert"><h3>Status</h3><div style="text-align: center"><h1>half-ripe palm</h1></div></div >')
+    }
+    if (palmNumber >= 12 & red === true) {
+      $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
+    }
+  })
   $('#raw').on('click', function () {
     $('#status').html('<div id="palm-status" class="alert alert-secondary" role="alert"><h3>Status</h3><div style="text-align: center"><h1>raw palm</h1></div></div >')
   })
@@ -54,10 +64,16 @@ $(function () {
           $('#add-palm').append(`<img id="palm-fruit" src="png/palm-fruit2.png" alt="palm-fruits" style="margin-left: ${xPos}px;">`)
         }
       }
-      console.log(numList)
+      if (palmNumber === 10 & red === true) {
+        $('#status').html('<div id="palm-status" class="alert alert-warning" role="alert"><h3>Status</h3><div style="text-align: center"><h1>half-ripe palm</h1></div></div >')
+      }
+      if (palmNumber >= 12 & red === true) {
+        $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
+      }
     }
   })
   $('#clear').on('click', function () {
+    $('#status').html('<div id="palm-status" class="alert alert-secondary" role="alert"><h3>Status</h3><div style="text-align: center"><h1>raw palm</h1></div></div >')
     $('#palm-number').html(`<h4>Number of ripe palm fruits: 0 palm fruit</h4>`)
     $('#add-palm').html('')
     palmNumber = 0;

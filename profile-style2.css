@@ -140,8 +140,9 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#karok2 {
-  width: 10px;
+#karok2{
+    width: 115px;
+    height: 150px;
 }
 
 .modal {
