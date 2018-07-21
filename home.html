@@ -1,0 +1,170 @@
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>popup </title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./home-style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div id="farm-name">
+      <h3 id="name">Ripe-palm Worldwide</h3>
+    </div>
+    <div class="vl"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" style="margin-left: 20px;">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item active" style="margin-left: 10px;">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item active" style="margin-left: 10px;">
+          <a class="nav-link" href="setting.html">Setting</a>
+        </li>
+      </ul>
+      <a href="index.html">
+        <form class="form-inline my-2 my-lg-0">
+          <img id="logout-button" src="https://image.ibb.co/gtqsWy/lockout.png" alt="Logout">
+        </form>
+      </a>
+    </div>
+  </nav>
+
+  <div id="all-modal">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Kind of your palm</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin-left:auto; margin-right: auto;">
+              <div class="col-6" style="text-align: right">
+                <button id='big-palm-button' type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#a">
+                  <img id="big-palm" src="png/palm.png" alt="Carpentaria palm">
+                </button>
+                <h4>Carpentaria</h4>
+              </div>
+              <div class="col-6">
+                <button id='small-palm-button' type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#a">
+                  <img id="small-palm" src="png/palm2.png" alt="Champagne palm">
+                </button>
+                <h4>Champagne</h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="a" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-3">
+                        <h5>Name</h5>
+                      </div>
+                      <div class="col-9">
+                        <input type="text" class="form-control" id="namepic" placeholder="Picture's Name">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-3">
+                        <h5>Description</h5>
+                      </div>
+                      <div class="col-9">
+                        <div class="form-group">
+                          <textarea class="form-control" id="descript" rows="3"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Back</button> -->
+                    <button type="button" class="btn btn-primary" id="savepic" data-dismiss="modal">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="box">
+    <button style="margin-top: 30px; margin-left: 30px; width: 230px; height: 470px;" type="button" class="btn btn-outline-secondary"
+      data-toggle="modal" data-target="#exampleModalCenter">
+      <img src="png/pluss.png" alt="plus" style="width: 40px;">
+    </button>
+    <div class="card" style="width: 16rem; margin-top:30px; margin-left: auto; margin-right: auto;">
+      <img id="big-palm-icon" class="card-img-top" src="png/big-palm-icon.png" alt="">
+      <div class="card-body">
+        <p class="card-text">
+          <b>Name:</b> Carpentaria
+          <hr>
+          <b>Description:</b> Saturday 21 July 2018
+        </p>
+        <a href="profile.html">
+          <button>Profile</button>
+        </a>
+      </div>
+    </div>
+    <div class="card" style="width: 16rem; margin-top:30px; margin-left: auto; margin-right: auto;">
+      <img id="small-palm-icon" class="card-img-top" src="png/palm2.png" alt="">
+      <div class="card-body">
+        <p class="card-text">
+          <b>Name:</b> Champagne
+          <hr>
+          <b>Description:</b> Saturday 21 July 2018
+        </p>
+        <a href="profile.html">
+          <button>Profile</button>
+        </a>
+      </div>
+    </div>
+  </div>Í
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="./home-app.js"></script>
+</body>
+
+</html>

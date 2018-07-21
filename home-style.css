@@ -1,0 +1,56 @@
+body{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.vl {
+  margin-left: 20px;
+    border-left: 3px solid gray;
+    height: 43px;
+}
+
+#logout-button {
+  margin-right: 10px;
+  height: 30px;
+}
+
+#logout-button:hover {
+   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.nav-link:hover {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#farm-name {
+  color: #d1a2ff;
+}
+
+#box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#big-palm{
+    height: 150px;
+    width: 100px;
+}
+
+#small-palm{
+    height: 120px;
+    width: 100px;
+    margin-top: 30px;
+}
+
+#palm-button {
+    height: 160px;
+    width: 122px;
+}
+
+#big-palm-icon {
+    height: 300px;
+    width: 200px;
+    margin-left: 25px;
+}
+#small-palm-icon {
+   margin-top: 30px; 
+}
