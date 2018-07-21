@@ -10,9 +10,9 @@ $(function () {
             dataType: "text",
             success: function (response) {
                 console.log(response)
-                if(response<=1023){
-                 $("#result-soid").html(`<div class="full center alert alert-warning" role="alert">
-                                        <h1 class = "big">${response}</h1></div>`)    
+                if (0 <= response & response <= 1023) {
+                    $("#result-soid").html(`<div class="full center alert alert-warning" role="alert">
+                                        <h1 class = "big">${response}</h1></div>`)
                 }
             },
             fail: function (response) {
@@ -25,9 +25,9 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-R/view",
             dataType: "text",
             success: function (response) {
-                if(response<=255){
+                if (0 <= response & response <= 255) {
                     console.log(response)
-                R = response;
+                    R = response;
                 }
             },
             fail: function (response) {
@@ -39,9 +39,9 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-G/view",
             dataType: "text",
             success: function (response) {
-                if(response<=255){
+                if (0 <= response & response <= 255) {
                     console.log(response)
-                G = response 
+                    G = response
                 }
             },
             fail: function (response) {
@@ -53,9 +53,9 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-B/view",
             dataType: "text",
             success: function (response) {
-                if(response<=255){
+                if (0 <= response & response <= 255) {
                     console.log(response)
-                B = response;
+                    B = response;
                 }
             },
             fail: function (response) {
@@ -71,9 +71,9 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-z_axis/view",
             dataType: "text",
             success: function (response) {
-                if(response<=1023){
+                if (0 <= response & response <= 1023) {
                     console.log(response)
-                $("#result-z_axis").html(`<div class="full center alert alert-warning" role="alert">
+                    $("#result-z_axis").html(`<div class="full center alert alert-warning" role="alert">
                                         <h1 class = "big">${response}</h1></div>`)
                 }
             },
@@ -87,7 +87,7 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-heat/view",
             dataType: "text",
             success: function (response) {
-                if(response<=1023){
+                if (0 <= response & response <= 1023) {
                     console.log(response)
                     $("#result-heat").html(`<div class="full center alert alert-warning" role="alert">
                                             <h1 class = "big">${response}</h1></div>`)
