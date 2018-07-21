@@ -6,7 +6,6 @@ $(function () {
   let palmNumber = 0
   let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
   $('#day-button').on('click', function () {
-    console.log('press');
     day = !day
     if (day === true) {
       document.body.style.backgroundColor = "#330867";
@@ -17,7 +16,6 @@ $(function () {
     }
   })
   $('#rain-button').on('click', function () {
-    console.log('press');
     rain = !rain
     if (rain === true) {
       document.body.style.backgroundImage = "url(png/rain.png)";
@@ -45,7 +43,6 @@ $(function () {
     $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
   })
   $('#add').on('click', function () {
-    console.log('palmnum' + palmNumber)
     let luckyNumber = numList[Math.floor(Math.random() * numList.length)];
     let index = numList.indexOf(luckyNumber);
     if (index > -1 & numList.length != 0) {
