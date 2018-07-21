@@ -5,13 +5,15 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-light_to_ready/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
+                if(response==1||response==0){
+                    console.log(response)
                 if (response == 1) {
                     $("#lightbutton").prop('checked', true);
                     lightbutton=true;
                 } else  if(response == 0) {
                     $('#lightbutton').prop('checked', false);
                     lightbutton=false;
+                }
                 }
             }, fail: {
                 function(response) {

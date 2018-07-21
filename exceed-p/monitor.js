@@ -10,8 +10,10 @@ $(function () {
             dataType: "text",
             success: function (response) {
                 console.log(response)
-                $("#result-soid").html(`<div class="full center alert alert-warning" role="alert">
-                                        <h1 class = "big">${response}</h1></div>`)
+                if(response<=1023){
+                 $("#result-soid").html(`<div class="full center alert alert-warning" role="alert">
+                                        <h1 class = "big">${response}</h1></div>`)    
+                }
             },
             fail: function (response) {
                 console.log(response)
@@ -23,8 +25,10 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-R/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
+                if(response<=255){
+                    console.log(response)
                 R = response;
+                }
             },
             fail: function (response) {
                 console.log(response)
@@ -35,8 +39,10 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-G/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
-                G = response
+                if(response<=255){
+                    console.log(response)
+                G = response 
+                }
             },
             fail: function (response) {
                 console.log(response)
@@ -47,8 +53,10 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-B/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
+                if(response<=255){
+                    console.log(response)
                 B = response;
+                }
             },
             fail: function (response) {
                 console.log(response)
@@ -63,9 +71,11 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-z_axis/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
+                if(response<=1023){
+                    console.log(response)
                 $("#result-z_axis").html(`<div class="full center alert alert-warning" role="alert">
                                         <h1 class = "big">${response}</h1></div>`)
+                }
             },
             fail: function (response) {
                 console.log(response)
@@ -77,9 +87,11 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-heat/view",
             dataType: "text",
             success: function (response) {
-                console.log(response)
-                $("#result-heat").html(`<div class="full center alert alert-warning" role="alert">
-                                        <h1 class = "big">${response}</h1></div>`)
+                if(response<=1023){
+                    console.log(response)
+                    $("#result-heat").html(`<div class="full center alert alert-warning" role="alert">
+                                            <h1 class = "big">${response}</h1></div>`)
+                }
             },
             fail: function (response) {
                 console.log(response)
