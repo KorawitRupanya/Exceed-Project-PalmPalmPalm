@@ -1,5 +1,5 @@
 #line_top_x {
-    margin-top: 15% ;
+    margin-top: 6% ;
 }
 .vl {
     margin-left: 20px;
@@ -19,6 +19,7 @@
   .nav-link:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
+
   #farm-name {
     color: #d1a2ff;
   }
