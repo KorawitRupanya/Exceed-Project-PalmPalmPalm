@@ -16,6 +16,27 @@ $(function () {
   setInterval(function () {
     $.ajax({
       type: "GET",
+      url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-light_to_ready/view",
+      dataType: "text",
+      success: function (response) {
+        if (response == 1 || response == 0) {
+          console.log(response)
+          if (response == 1) {
+            $("#lightbutton").prop('checked', true);
+            lightbutton = true;
+          } else if (response == 0) {
+            $('#lightbutton').prop('checked', false);
+            lightbutton = false;
+          }
+        }
+      }, fail: {
+        function(response) {
+          console.log(response)
+        }
+      }
+    });
+    $.ajax({
+      type: "GET",
       url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-soid/view",
       dataType: "text",
       success: function (response) {
@@ -123,12 +144,25 @@ $(function () {
                   $('#palm-number').html(`<h4>Number of ripe palm fruits: ${palmNumber} palm fruits</h4>`)
                   $('#add-palm').append(`<img id="palm-fruit" src="png/palm-fruit1.png" alt="palm-fruits" style="margin-left: ${xPos}px;">`)
                 }
-              }
-              if (palmNumber === 10 & red === true) {
-                $('#status').html('<div id="palm-status" class="alert alert-warning" role="alert"><h3>Status</h3><div style="text-align: center"><h1>half-ripe palm</h1></div></div >')
-              }
-              if (palmNumber >= 12 & red === true) {
-                $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
+                if (palmNumber === 10) {
+                  $('#status').html('<div id="palm-status" class="alert alert-warning" role="alert"><h3>Status</h3><div style="text-align: center"><h1>half-ripe palm</h1></div></div >')
+                }
+                if (palmNumber >= 12) {
+                  $.ajax({
+                    type: "POST",
+                    url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-light_to_ready/set",
+                    data: { value: 1 },
+                    dataType: "text",
+                    success: function (response) {
+                      console.log('Great')
+                    }, fail: {
+                      function(response) {
+                        console.log(response)
+                      }
+                    }
+                  });
+                  $('#status').html('<div id="palm-status" class="alert alert-danger" role="alert"><h3>Status</h3><div style="text-align: center"><h1>ripe palm</h1></div></div >')
+                }
               }
             }
           }
@@ -153,9 +187,9 @@ $(function () {
             console.log('click')
             click = true
           }
-          if (response == 0) {
-            click = false
-          }
+          // if (response == 0) {
+          //   click = false
+          // }
         }
       },
       fail: function (response) {

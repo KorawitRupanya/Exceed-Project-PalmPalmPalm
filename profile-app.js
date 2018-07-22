@@ -72,6 +72,19 @@ $(function () {
     }
   })
   $('#clear').on('click', function () {
+    $.ajax({
+      type: "POST",
+      url: "http://ecourse.cpe.ku.ac.th/exceed/api/palmpalmpalm-light_to_ready/set",
+      data: { value: 0 },
+      dataType: "text",
+      success: function (response) {
+        console.log('Great')
+      }, fail: {
+        function(response) {
+          console.log(response)
+        }
+      }
+    });
     $('#status').html('<div id="palm-status" class="alert alert-secondary" role="alert"><h3>Status</h3><div style="text-align: center"><h1>raw palm</h1></div></div >')
     $('#palm-number').html(`<h4>Number of ripe palm fruits: 0 palm fruit</h4>`)
     $('#add-palm').html('')
@@ -79,5 +92,6 @@ $(function () {
     $('#red-button').prop('checked', false)
     red = false;
     numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
   })
 })
