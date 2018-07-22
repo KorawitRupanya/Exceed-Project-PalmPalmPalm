@@ -28,7 +28,7 @@
   <script type="text/javascript">
     google.charts.load('current', { 'packages': ['line'] });
     google.charts.setOnLoadCallback(drawChart);
-    let numPalm = 19
+    let numPalm = 1
     let checkZ = 550
 
     function drawChart() {
@@ -42,20 +42,20 @@
 
       data.addRows([
         [0, 0],
-        [1, 23],
-        [2, 20],
-        [3, 26],
-        [4, 28],
-        [5, 30],
-        [6, 19],
-        [7, 27],
-        [8, 17],
-        [9, 16],
-        [10, 20],
-        [11, 22],
-        [12, 30],
-        [13, 25],
-        [14, 19]
+        [1, 2],
+        [2, 2],
+        [3, 2],
+        [4, 3],
+        [5, 3],
+        [6, 5],
+        [7, 5],
+        [8, 6],
+        [9, 6],
+        [10, 2],
+        [11, 2],
+        [12, 3],
+        [13, 2],
+        [14, 1]
       ]);
 
       var options = {
@@ -109,19 +109,18 @@
           dataType: "text",
           success: function (response) {
             console.log(response)
-
-            if (checkZ < response) {
-              data.removeRows(14, 1)
-
-              numPalm += 1
-              data.addRows([
-                [14, numPalm]
-              ]);
-
-              chart.draw(data, google.charts.Line.convertOptions(options));
+            if (response >= 0 & response < 1023) {
+              if ((response > 200 & response < 430) || (response > 300 & response > 447)) {
+                data.removeRows(14, 1)
+                if (numPalm < 15) {
+                  numPalm++;
+                }
+                data.addRows([
+                  [14, numPalm]
+                ]);
+                chart.draw(data, google.charts.Line.convertOptions(options));
+              }
             }
-
-
           }
         });
       }, 2000)
