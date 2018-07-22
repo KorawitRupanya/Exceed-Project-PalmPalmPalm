@@ -1,15 +1,18 @@
 let R = 0;
 let G = 0;
 let B = 0;
-
 $(function () {
   let rain = false
   let red = false
+  let click = false
   let bgColor = "#d1fdff"
   let palmNumber = 0
   let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-  // let prevoiusCount = 1
-  // let firstResp = true
+  $('#close-button').on('click', function () {
+    click = false
+    console.log('close-button: ' + click)
+  })
+
   setInterval(function () {
     $.ajax({
       type: "GET",
@@ -99,9 +102,9 @@ $(function () {
         //   prevoiusCount = response
         //   firstResp = false
         // }
+        console.log('press:' + response)
         if (0 <= response & response <= 1023) {
-          console.log('press:' + response)
-          if ((response > 200 & response < 430) || (response > 300 & response > 447)) {
+          if ((response > 200 & response < 429) || (response > 300 & response > 447)) {
             let luckyNumber = numList[Math.floor(Math.random() * numList.length)];
             let index = numList.indexOf(luckyNumber);
             if (index > -1 & numList.length != 0) {
@@ -145,9 +148,13 @@ $(function () {
       success: function (response) {
         if (0 <= response & response <= 1023) {
           console.log('squirrel: ' + response)
-          if (response == 1) {
+          if (response == 1 & click == false) {
             document.getElementById("squirrel").click();
             console.log('click')
+            click = true
+          }
+          if (response == 0) {
+            click = false
           }
         }
       },
