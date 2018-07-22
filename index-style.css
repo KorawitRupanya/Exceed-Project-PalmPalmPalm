@@ -1,16 +1,5 @@
-.center {
-  text-align: center
-}
-
-.box {
-  overflow: scroll;
-  width: 800px;
-  height: 600px;
-  margin: auto;
-}
-
 .form-group{
-  margin-left: 380px;
+  margin-left: 50px;
 }
 
 .form-control {
@@ -23,6 +12,5 @@
 
 body{
   height: 100vh;
-  text-align: center;
-  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  background-image: linear-gradient(to right, #fddb92 0%, #d1fdff 100%);
 }
